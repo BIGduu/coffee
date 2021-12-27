@@ -1,0 +1,4 @@
+# Project exclude paths
+/.gradle/
+/coffee-client/build/
+/coffee-server/build/
