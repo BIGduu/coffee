@@ -2,3 +2,5 @@
 /.gradle/
 /coffee-client/build/
 /coffee-server/build/
+/coffee-common/build/
+/.idea/
