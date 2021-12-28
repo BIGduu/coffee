@@ -1,10 +1,19 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.jetbrains.kotlin.gradle.dsl.Coroutines
 
-
 plugins {
     kotlin("jvm").version("1.6.10")
     idea
+}
+
+apply {
+    plugin("org.jetbrains.dokka")
+}
+
+buildscript {
+    dependencies {
+        classpath("org.jetbrains.dokka:dokka-gradle-plugin:1.6.10")
+    }
 }
 
 allprojects {
@@ -17,6 +26,9 @@ allprojects {
     repositories {
         mavenCentral()
     }
+    dependencies {
+        implementation("org.jetbrains.dokka:dokka-gradle-plugin:1.6.10")
+    }
 }
 
 
@@ -26,7 +38,6 @@ subprojects {
     }
 
     dependencies {
-
         // netty
         implementation("io.netty:netty-all:4.1.72.Final")
 
